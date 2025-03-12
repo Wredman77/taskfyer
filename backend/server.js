@@ -15,8 +15,8 @@ const app = express();
 // middleware
 app.use(
   cors({
-    origin: "*",
-    //credentials: true,
+    origin: process.env.CLIENT_URL,
+    credentials: true,
   })
 );
 app.use(express.json());
